@@ -10,6 +10,21 @@ body {
 }
 
 ::selection {
-  color: white;
+  color: #add8e6;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(185, 185, 185);
+}
+
+::-webkit-scrollbar-thumb:hover {
   background: #add8e6;
 }
