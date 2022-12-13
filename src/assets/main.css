@@ -1,0 +1,15 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+::selection {
+  color: white;
+  background: #add8e6;
+}
