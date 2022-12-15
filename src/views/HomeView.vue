@@ -12,7 +12,7 @@
       <button type="button" id="searchbutton-header"><img src="../assets/images/icons/search.png" alt="Search" class="icon"></button>
     </div>
     <div id="header-right">
-      <a href="/" class="option-menu">Catálogo</a>
+      <RouterLink to="/products"><p class="option-menu">Catálogo</p></RouterLink>
       <p id="login-button" class="option-menu">Login</p>
     </div>
   </header>

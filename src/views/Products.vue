@@ -1,0 +1,3 @@
+<template>
+    Produtos aqui
+</template>
