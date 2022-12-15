@@ -37,9 +37,9 @@
         <p id="home-2-second-message" class="text-home">Inclusive a sua favorita :)</p>
       </div>
       <div id="home-2-content-div-3">
-        <div id="products-list">
+        <div id="catalog-div">
           <p>Confira o nosso catálogo:</p>
-          <button>A</button>
+          <div id="catalog-button"></div>
         </div>
       </div>
     </div>
@@ -88,6 +88,9 @@ a {
   cursor: pointer;
   filter: grayscale(0%);
   transform: scale(1.1);
+}
+#logo-header:active {
+  transform: scale(0.8);
 }
 #title-header {
   font-size: 40px;
@@ -222,6 +225,48 @@ a {
   font-size: 70px;
   margin: 0px;
 }
+#home-2-content-div-3 {
+  width: 100%;
+  height: 15%;
+  padding-top: 10%;
+  padding-right: 5%;
+  display: flex;
+  justify-content: end;
+}
+#catalog-div {
+  width: 350px;
+  height: 350px;
+  font-size: 24px;
+  color: gray;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s;
+  transform: rotate3d(1, 1, 1, 20deg);
+}
+#catalog-div:hover {
+  transform: rotate3d(1, 1, 1, 0deg);
+}
+#catalog-button {
+  background-image: url("../assets/images/catalog_button.png");
+  background-size: cover;
+  width: 200px;
+  height: 200px;
+  filter: grayscale(100%);
+  transition: all 0.5s;
+}
+#catalog-button:hover {
+  cursor: pointer;
+  filter: grayscale(0%);
+  transform: scale(1.1);
+}
+#catalog-button:active {
+  transform: scale(0.8);
+}
 .big { height: 200vh; }
 .medium { height: 110vh }
 .small { height: 60vh; }
@@ -242,7 +287,7 @@ a {
 }
 .text-home {
   color: white;
-  text-shadow: 2px 4px 3px rgba(0,0,0,0.8);
+  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
 }
 .container {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
