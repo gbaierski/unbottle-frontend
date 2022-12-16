@@ -35,6 +35,7 @@
             <RouterLink to="/products"><p class="option-menu">Catálogo</p></RouterLink>
             <p id="login-button" class="option-menu" v-on:click="displayLogin">Login</p>
         </div>
+        <div id="cart"><img src="../assets/images/cart.png" id="cart-icon"></div>
   </header>
 </template>
 <style scoped>
@@ -128,6 +129,36 @@ a {
 }
 #searchbutton-header:active {
   transform: scale(0.8);
+}
+#cart {
+  width: 60px;
+  height: 60px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 50%;
+  position: absolute;
+  margin-top: 240px;
+  margin-left: 95%;
+  background-color: white;
+  transition: all 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#cart:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+#cart:active {
+  transform: scale(0.8);
+}
+#cart-icon {
+  width: 30px;
+  filter: grayscale(100%);
+  transition: all 0.5s;
+}
+#cart-icon:hover {
+  cursor: pointer;
+  filter: grayscale(0%);
 }
 .icon {
   width: 100%;
