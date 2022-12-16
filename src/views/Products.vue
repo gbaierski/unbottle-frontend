@@ -1,14 +1,34 @@
-<script setup>
+<script>
+import { mapState , mapStores , mapActions } from 'pinia'
+import {useProductStore} from '@/stores/Products'
+
+export default{
+	computed:{
+		...mapStores(useProductStore),
+		...mapState(useProductStore, ['products'])
+	},
+	methods:{
+		...mapActions(useProductStore, ['getAllProducts'])
+	},
+	async mounted(){
+		try{
+			this.getAllProducts()
+		}catch(e){
+			alert(e)
+		}
+	},
+	}
+
 </script>
 <template>
     <Header />
     <section id="products-container">
         <h1>Confira nossos produtos:</h1>
         <div id="products-list">
-            <div class="product">
+            <div class="product" v-for="product in products" :key="product.id" >
 							<img src="../assets/images/wallpapers/walk.jpg" class="product-image">
-							<h2 class="product-name">Nome do modelo</h2>
-							<h3 class="product-price">R$ 15,99</h3>
+							<h2 class="product-name">{{product.nomeProduto}}</h2>
+							<h3 class="product-price">R${{product.preco}}</h3>
 							<RouterLink to="/product"><button class="product-buy">Verificar produto</button></RouterLink>
 						</div>
         </div>

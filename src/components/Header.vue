@@ -1,20 +1,42 @@
 <script>
-  import Swal from 'sweetalert2'
-  export default {
+import {mapState , mapStores , mapActions} from 'pinia'
+import {useLoginStore} from '@/stores/Login'
+import Swal from 'sweetalert2'
+
+
+export default {
+    computed:{
+      ...mapStores(useLoginStore),
+      ...mapState(useLoginStore, ['form', 'userLogado' , 'token'])
+    },
     methods:{
-      displayLogin()
-      {
+      ...mapActions(useLoginStore, ['logar']),
+      async logarAgora(){
+        try{
+          await this.logar(this.form.username , this.form.password)
+          localStorage.setItem('token' , this.token)
+          localStorage.setItem('userLogado' , this.userLogado)
+        }catch(e){
+          console.log(e)
+        }
+      },
+      displayLogin(){
         Swal.fire({
           title: '<div style="color:gray">Login de usuário</div>',
           html:
+            '<form>'+
             '<div style="display:flex; flex-direction: column; justify-content: center; align-itens: center;">' +
-              '<input type="text" placeholder="Login" style="height: 35px; margin: 20px 0px 20px 0px;">' +
-              '<input type="password" placeholder="Senha" style="height: 35px;">' +
-            '</div>',
+              '<input id="username" type="text" placeholder="UserName" style="height: 35px; margin: 20px 0px 20px 0px;">' +
+              '<input id="password" type="password" placeholder="Senha" style="height: 35px;">' +
+            '</div></form>',
           showCloseButton: false,
           focusConfirm: false,
-          confirmButtonText:
-            'Login',
+          confirmButtonText: 'Login',
+          preConfirm:() => {
+            this.form.username = Swal.getPopup().querySelector('#username').value
+            this.form.password = Swal.getPopup().querySelector('#password').value
+            this.logarAgora()
+          }
         })
       }
     }
