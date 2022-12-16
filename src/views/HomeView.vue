@@ -233,7 +233,7 @@ li:active {
   margin-left: 5%;
 }
 #home-5-first-message {
-  font-size: 60px;
+  font-size: 80px;
   margin-top: 450px;
 }
 #footer {
