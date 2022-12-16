@@ -6,34 +6,10 @@
         <h1>Confira nossos produtos:</h1>
         <div id="products-list">
             <div class="product">
-							<img src="../assets/images/wallpapers/cat.jpg" class="product-image">
+							<img src="../assets/images/wallpapers/walk.jpg" class="product-image">
 							<h2 class="product-name">Nome do modelo</h2>
 							<h3 class="product-price">R$ 15,99</h3>
-							<button class="product-buy">Verificar produto</button>
-						</div>
-            <div class="product">
-							<img src="../assets/images/wallpapers/cat.jpg" class="product-image">
-							<h2 class="product-name">Nome do modelo</h2>
-							<h3 class="product-price">R$ 15,99</h3>
-							<button class="product-buy">Verificar produto</button>
-						</div>
-						<div class="product">
-							<img src="../assets/images/wallpapers/cat.jpg" class="product-image">
-							<h2 class="product-name">Nome do modelo</h2>
-							<h3 class="product-price">R$ 15,99</h3>
-							<button class="product-buy">Verificar produto</button>
-						</div>
-						<div class="product">
-							<img src="../assets/images/wallpapers/cat.jpg" class="product-image">
-							<h2 class="product-name">Nome do modelo</h2>
-							<h3 class="product-price">R$ 15,99</h3>
-							<button class="product-buy">Verificar produto</button>
-						</div>
-						<div class="product">
-							<img src="../assets/images/wallpapers/cat.jpg" class="product-image">
-							<h2 class="product-name">Nome do modelo</h2>
-							<h3 class="product-price">R$ 15,99</h3>
-							<button class="product-buy">Verificar produto</button>
+							<RouterLink to="/product"><button class="product-buy">Verificar produto</button></RouterLink>
 						</div>
         </div>
     </section>
@@ -60,9 +36,9 @@ h1 {
     margin: 50px;
     border-radius: 30px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 .product-image {
 	width: 100%;
@@ -87,8 +63,8 @@ h1 {
 	border: none;
 	border-radius: 10px;
 	color: white;
-	transition: all 0.5s;
 	outline: none;
+	transition: all 0.5s;
 }
 .product-buy:hover {
   cursor: pointer;
