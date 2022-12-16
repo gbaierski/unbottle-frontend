@@ -32,12 +32,48 @@
     </div>
   </section>
   <section class="container image big" id="home-3">
+      <div id="home-3-content-div-1">
+        <p id="home-3-first-message" class="text-home">Personalize</p>
+      </div>
   </section>
   <section class="container small" id="home-4">
+    <div id="home-4-container">
+      <h2 id="home-4-title">Curiosidade:</h2>
+      <p id="home-4-description">
+      As primeiras garrafas de que há conhecimento datam de há cerca de 3500 anos, altura em que eram utilizadas pelos egípcios. Nessa época,   eram ainda de barro, pois só por volta do século I a. C. começaram a ser mais populares as de vidro
+      </p>
+    </div>
   </section>
   <section class="container image medium" id="home-5">
+    <p id="home-5-first-message" class="text-home">Vamos limpar o planeta! :) </p>
   </section>
   <section class="container small" id="home-6">
+    <div id="footer">
+      <div class="footer-column">
+        <ul>
+          <li>Sobre nós</li>
+          <li>SAC</li>
+          <li>Nossa história</li>
+          <li>Termos de uso</li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <ul>
+          <li>Atendimento ao cliente</li>
+          <li>Portal de chamados</li>
+          <li>CNPJ na receita federal</li>
+          <li>Regulamentos sobre compras</li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <ul>
+          <li>Home</li>
+          <li>Catálogo</li>
+          <li>Carrinho</li>
+          <li>Ajuda</li>
+        </ul>
+      </div>
+    </div>
   </section>
 </template>
 <style scoped>
@@ -47,6 +83,19 @@
 #home-3 { background-image: url("../assets/images/wallpapers/custom.jpg"); }
 #home-5 { background-image: url("../assets/images/wallpapers/save-planet.jpg"); }
 
+li {
+  color: gray;
+  list-style-type: none;
+  transition: all 0.5s;
+}
+li:hover {
+  cursor: pointer;
+  color: #add8e6;
+  transform: scale(1.1);
+}
+li:active {
+  transform: scale(0.8);
+}
 /* --- HOME 1 --- */
 
 #home-1-content {
@@ -158,9 +207,45 @@
 #catalog-button:active {
   transform: scale(0.8);
 }
+#home-3-content-div-1 {
+  width:40%;
+  height: 50%;
+  padding-top: 40%;
+  display: flex;
+}
+#home-3-first-message {
+  transform: rotate(-90deg);
+  font-size: 120px;
+  margin: 0px;
+}
+#home-4-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: gray;
+}
+#home-4-title {
+  font-size: 40px;
+}
+#home-4-description {
+  width: 90%;
+  margin-left: 5%;
+}
+#home-5-first-message {
+  font-size: 60px;
+  margin-top: 450px;
+}
+#footer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
 .big { height: 200vh; }
 .medium { height: 110vh }
-.small { height: 60vh; }
+.small { height: 30vh; }
 .image {
   width: 100%;
   background-size: cover;
@@ -171,5 +256,8 @@
 }
 .container {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.footer-column {
+  font-size: 18px;
 }
 </style>
