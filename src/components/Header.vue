@@ -1,3 +1,26 @@
+<script>
+  import Swal from 'sweetalert2'
+  export default {
+    methods:{
+      displayLogin()
+      {
+        Swal.fire({
+          title: '<div style="color:gray">Login de usuário</div>',
+          html:
+            '<div style="display:flex; flex-direction: column; justify-content: center; align-itens: center;">' +
+              '<input type="text" placeholder="Login" style="height: 35px; margin: 20px 0px 20px 0px;">' +
+              '<input type="password" placeholder="Senha" style="height: 35px;">' +
+            '</div>',
+          showCloseButton: false,
+          focusConfirm: false,
+          confirmButtonText:
+            'Login',
+        })
+      }
+    }
+    
+  }
+</script>
 <template>
     <header>
         <div id="header-left">
@@ -10,7 +33,7 @@
         </div>
         <div id="header-right">
             <RouterLink to="/products"><p class="option-menu">Catálogo</p></RouterLink>
-            <p id="login-button" class="option-menu">Login</p>
+            <p id="login-button" class="option-menu" v-on:click="displayLogin">Login</p>
         </div>
   </header>
 </template>
