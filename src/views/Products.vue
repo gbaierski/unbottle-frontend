@@ -5,13 +5,36 @@
     <section id="products-container">
         <h1>Confira nossos produtos:</h1>
         <div id="products-list">
-            <div id="product"></div>
-            <div id="product"></div>
-            <div id="product"></div>
-            <div id="product"></div>
-            <div id="product"></div>
-            <div id="product"></div>
-            <div id="product"></div>
+            <div class="product">
+							<img src="../assets/images/wallpapers/cat.jpg" class="product-image">
+							<h2 class="product-name">Nome do modelo</h2>
+							<h3 class="product-price">R$ 15,99</h3>
+							<button class="product-buy">Verificar produto</button>
+						</div>
+            <div class="product">
+							<img src="../assets/images/wallpapers/cat.jpg" class="product-image">
+							<h2 class="product-name">Nome do modelo</h2>
+							<h3 class="product-price">R$ 15,99</h3>
+							<button class="product-buy">Verificar produto</button>
+						</div>
+						<div class="product">
+							<img src="../assets/images/wallpapers/cat.jpg" class="product-image">
+							<h2 class="product-name">Nome do modelo</h2>
+							<h3 class="product-price">R$ 15,99</h3>
+							<button class="product-buy">Verificar produto</button>
+						</div>
+						<div class="product">
+							<img src="../assets/images/wallpapers/cat.jpg" class="product-image">
+							<h2 class="product-name">Nome do modelo</h2>
+							<h3 class="product-price">R$ 15,99</h3>
+							<button class="product-buy">Verificar produto</button>
+						</div>
+						<div class="product">
+							<img src="../assets/images/wallpapers/cat.jpg" class="product-image">
+							<h2 class="product-name">Nome do modelo</h2>
+							<h3 class="product-price">R$ 15,99</h3>
+							<button class="product-buy">Verificar produto</button>
+						</div>
         </div>
     </section>
 </template>
@@ -31,12 +54,53 @@ h1 {
     flex-wrap: wrap;
     justify-content: center;
 }
-#product {
+.product {
     width: 800px;
     height: 800px;
     margin: 50px;
-    background-color: green;
     border-radius: 30px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+}
+.product-image {
+	width: 100%;
+	height: 70%;
+	object-fit: cover;
+	border-top-left-radius: 30px;
+	border-top-right-radius: 30px;
+}
+.product-name {
+	font-size: 30px;
+	margin: 10px;
+	text-align: center;
+	color: gray;
+}
+.product-buy {
+	width: 200px;
+	height: 50px;
+	font-size: 17px;
+	margin: 0px;
+	font-weight: bold;
+	background-color: #add8e6;
+	border: none;
+	border-radius: 10px;
+	color: white;
+	transition: all 0.5s;
+	outline: none;
+}
+.product-buy:hover {
+  cursor: pointer;
+	color: white;
+  transform: scale(1.1);
+	background-color: #78b3c7;
+}
+.product-buy:active {
+  transform: scale(0.95);
+}
+.product-price {
+	font-size: 20px;
+	color: gray;
 }
 </style>
